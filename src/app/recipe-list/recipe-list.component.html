@@ -1,0 +1,5 @@
+<p *ngIf="!recipes.length"> Loading...</p>
+<p *ngFor="let recipe of recipes">
+  {{recipe.name}}
+  {{recipe.rating}}
+</p>
