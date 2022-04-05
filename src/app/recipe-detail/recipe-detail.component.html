@@ -1,3 +1,21 @@
-<h1>{{recipe.name}}</h1>
-<h3>{{recipe.rating | rating}}</h3>
-<img src="{{recipe.imageURL}}" alt="" class="img-thumbnail">
+<div class="buttons">
+  <button class="btn btn-primary" (click)="openAdd()">Dodaj przepis</button>
+  <button class="btn btn-secondary" (click)="openAdd()">Szczegóły</button>
+</div>
+<hr>
+
+<ng-container *ngIf="isopen">
+<div class="maindetails">
+  <h1>{{ recipe.name }}</h1>
+  <h3>{{ recipe.rating | rating }}</h3>
+</div>
+<div class="image">
+  <img src="{{ recipe.imageURL }}" alt="" class="img-thumbnail" />
+</div>
+
+<div class="recipeinstruction">
+  <h4>Jak przyżądzić?</h4>
+  <p>{{recipe.description | description}}</p>
+</div>
+
+</ng-container>

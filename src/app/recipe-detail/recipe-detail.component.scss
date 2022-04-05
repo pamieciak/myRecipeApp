@@ -1,0 +1,30 @@
+.buttons{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .btn{
+    margin: .3rem;
+    padding: .5rem 1rem;
+    font-size: 1.5rem;
+  }
+}
+
+.maindetails{
+  display: flex;
+  justify-content: space-around;
+}
+
+.image{
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ margin-top: 1rem;
+ img{
+   max-height: 300px;
+ }
+}
+
+.recipeinstruction{
+  margin-top: 1rem;
+}
