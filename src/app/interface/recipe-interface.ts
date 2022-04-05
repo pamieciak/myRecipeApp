@@ -4,6 +4,7 @@ export interface Recipe {
   description: string[];
   rating: number;
   ingredients: Ingredient[];
+  imageURL: string;
 }
 
 export interface Ingredient {
