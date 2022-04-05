@@ -3,11 +3,7 @@ export interface Recipe {
   id: number;
   description: string[];
   rating: number;
-  ingredients: Ingredient[];
+  ingriedients: [{name: string, value: string}];
   imageURL: string;
 }
 
-export interface Ingredient {
-  name: string;
-  value: string;
-}

@@ -21,6 +21,7 @@ export class RecipeDetailComponent implements OnInit {
   ngOnInit(): void {
     this.recipeApi.getRecipes().subscribe((result) => {
       this.recipe = result[0];
+      console.log(this.recipe.ingriedients.name)
     });
 
     this.showDetail.$senddetails.subscribe((show) => {
