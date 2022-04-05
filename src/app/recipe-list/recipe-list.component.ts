@@ -1,19 +1,7 @@
+
 import { Component, OnInit } from '@angular/core';
-
-
-interface Recipe {
-  name: string;
-  id: number;
-  descriprion: string[];
-  rating: number;
-  ingredients: Ingredient[]
-}
-
-interface Ingredient{
-  name: string;
-  value: string;
-}
-
+import { Recipe } from '../interface/recipe-interface';
+import { RecipeApiService } from '../services/recipe-api.service';
 
 
 @Component({
@@ -25,15 +13,13 @@ export class RecipeListComponent implements OnInit {
   // deklaracja pola do przypisania zmiennych z bazy danych
   public recipes: Recipe[] = [];
 
-  constructor(){
-    fetch('http://localhost:3000/recipes')
-    .then(res => res.json())
-    .then((recipes: Recipe[]) => {
-      this.recipes = recipes;
-    })
+  constructor(private recipeApi: RecipeApiService){
   }
 
-  ngOnInit(): void {
+  ngOnInit() {
+    this.recipeApi.getRecipes().subscribe((result) => {
+      this.recipes = result;
+    })
   }
 
 }

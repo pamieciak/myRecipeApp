@@ -1,0 +1,23 @@
+.element {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  max-width: 200px;
+  min-height: 300px;
+  border: 7px solid black;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 1.5rem;
+  background-color: #b7cadb;
+}
+
+.rating {
+  font-size: 1rem;
+}
+
+.btn {
+  position: relative;
+  margin: 0 auto;
+  width: 50%;
+}
