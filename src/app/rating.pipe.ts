@@ -6,7 +6,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class RatingPipe implements PipeTransform {
 
   transform(recipe: number) {
-    return '👏🏾'.repeat(recipe)
+    return '❤️'.repeat(recipe)
   }
 
 }
