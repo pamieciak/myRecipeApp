@@ -2,21 +2,26 @@
   <button class="btn btn-primary" (click)="openAdd()">Dodaj przepis</button>
   <button class="btn btn-secondary" (click)="openAdd()">Szczegóły</button>
 </div>
-<hr>
+<hr />
 
-<ng-container *ngIf="isopen">
-<div class="maindetails">
-  <h1>{{ recipe.name }}</h1>
-  <h3>{{ recipe.rating | rating }}</h3>
-</div>
-<div class="image">
-  <img src="{{ recipe.imageURL }}" alt="" class="img-thumbnail" />
-</div>
+<ng-container *ngIf="isopen && recipe">
+  <div class="maindetails">
+    <h1>{{ recipe.name | json }}</h1>
+    <h3>{{ recipe.rating | rating }}</h3>
+  </div>
+  <div class="image">
+    <img src="{{ recipe.imageURL }}" alt="" class="img-thumbnail" />
+  </div>
 
-<div class="recipeinstruction">
   <h4>Jak przyżądzić?</h4>
-  <p>{{recipe.description | description}}</p>
-  <p>{{recipe.ingriedients}}</p>
-</div>
-
+  <div class="recipeinstruction">
+    <ol>
+      <li *ngFor="let rec of recipe.description">{{ rec }}</li>
+    </ol>
+    <ul>
+      <li *ngFor="let ing of recipe.ingriedients">
+        {{ ing.name }} - {{ ing.value }}
+      </li>
+    </ul>
+  </div>
 </ng-container>

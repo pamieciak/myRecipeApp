@@ -10,6 +10,7 @@ import { RecipeItemComponent } from './recipe-list/recipe-item/recipe-item.compo
 import { HttpClientModule } from '@angular/common/http';
 import { RatingPipe } from './rating.pipe';
 import { DescriptionPipe } from './description.pipe';
+import { IngridientsPipe } from './ingridients.pipe';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { DescriptionPipe } from './description.pipe';
     RecipeDetailComponent,
     RecipeItemComponent,
     RatingPipe,
-    DescriptionPipe
+    DescriptionPipe,
+    IngridientsPipe
   ],
   imports: [
     BrowserModule,

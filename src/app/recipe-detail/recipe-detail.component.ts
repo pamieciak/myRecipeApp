@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { Recipe } from '../interface/recipe-interface';
+import { Component, Input, OnInit } from '@angular/core';
+import { Ingridient, Recipe } from '../interface/recipe-interface';
 import { RecipeApiService } from '../services/recipe-api.service';
 import { ShowdetailService } from '../services/showdetail.service';
 
@@ -9,9 +9,12 @@ import { ShowdetailService } from '../services/showdetail.service';
   styleUrls: ['./recipe-detail.component.scss'],
 })
 export class RecipeDetailComponent implements OnInit {
-  public recipe!: Recipe;
+ @Input() recipe?: Recipe;
+
 
   isopen = true;
+
+
 
   constructor(
     private recipeApi: RecipeApiService,
@@ -21,8 +24,9 @@ export class RecipeDetailComponent implements OnInit {
   ngOnInit(): void {
     this.recipeApi.getRecipes().subscribe((result) => {
       this.recipe = result[0];
-      console.log(this.recipe.ingriedients.name)
-    });
+
+
+      })
 
     this.showDetail.$senddetails.subscribe((show) => {
       this.recipe = show;

@@ -35,7 +35,7 @@
         "Rozbijamy jajka i dodajemy (uwaga! bez skorupki!)",
         "Mieszamy rozbite jajka i czekamy na jajecznice"
       ],
-      "ingriedients:": [
+      "ingriedients": [
         {
           "name": "jajka",
           "value": "3 szt."
