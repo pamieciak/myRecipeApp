@@ -11,6 +11,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { RatingPipe } from './rating.pipe';
 import { DescriptionPipe } from './description.pipe';
 import { IngridientsPipe } from './ingridients.pipe';
+import { AddRecipeComponent } from './recipe-detail/add-recipe/add-recipe.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -21,12 +23,15 @@ import { IngridientsPipe } from './ingridients.pipe';
     RecipeItemComponent,
     RatingPipe,
     DescriptionPipe,
-    IngridientsPipe
+    IngridientsPipe,
+    AddRecipeComponent
   ],
   imports: [
     BrowserModule,
     NgbModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]

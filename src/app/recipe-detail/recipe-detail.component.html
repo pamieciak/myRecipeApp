@@ -13,15 +13,21 @@
     <img src="{{ recipe.imageURL }}" alt="" class="img-thumbnail" />
   </div>
 
-  <h4>Jak przyżądzić?</h4>
+  <h4 class="text-center mt-3">Jak przyżądzić?</h4>
   <div class="recipeinstruction">
     <ol>
       <li *ngFor="let rec of recipe.description">{{ rec }}</li>
     </ol>
-    <ul>
-      <li *ngFor="let ing of recipe.ingriedients">
-        {{ ing.name }} - {{ ing.value }}
-      </li>
-    </ul>
+    <table>
+      <tbody>
+        <tr *ngFor="let item of recipe.ingriedients">
+          <td>{{ item.name }}</td>
+          <th>{{ item.value }}</th>
+        </tr>
+      </tbody>
+    </table>
   </div>
+</ng-container>
+<ng-container *ngIf="!isopen && recipe">
+<app-add-recipe></app-add-recipe>
 </ng-container>

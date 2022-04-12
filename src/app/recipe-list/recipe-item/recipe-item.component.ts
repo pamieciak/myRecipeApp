@@ -20,7 +20,7 @@ export class RecipeItemComponent implements OnInit {
     }
 
     show(){
-      this.showDetail.$senddetails.next(this.recipe)
+      this.showDetail.senddetails$.next(this.recipe)
     }
 
 

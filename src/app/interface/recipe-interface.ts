@@ -1,13 +1,9 @@
 export interface Recipe {
   name: string;
-  id: number;
-  description: string[];
+  id?: number;
+  description?: string[];
   rating: number;
-  ingriedients: Ingridient[]
-   imageURL: string;
+  ingriedients?: {name: string, value:string}[];
+   imageURL?: string;
 }
 
-export interface Ingridient {
-  name: string;
-  value: string;
-}

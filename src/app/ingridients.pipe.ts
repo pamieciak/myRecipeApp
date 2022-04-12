@@ -5,8 +5,8 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class IngridientsPipe implements PipeTransform {
 
-  transform(ing: {name:string, value:number}[]) {
-    return ing.values
+  transform(value:any): any {
+    return Object.keys(value)
   }
 
 }

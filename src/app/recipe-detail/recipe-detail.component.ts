@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Ingridient, Recipe } from '../interface/recipe-interface';
+import { Recipe } from '../interface/recipe-interface';
 import { RecipeApiService } from '../services/recipe-api.service';
 import { ShowdetailService } from '../services/showdetail.service';
 
@@ -12,7 +12,7 @@ export class RecipeDetailComponent implements OnInit {
  @Input() recipe?: Recipe;
 
 
-  isopen = true;
+  isopen = false;
 
 
 
@@ -28,7 +28,7 @@ export class RecipeDetailComponent implements OnInit {
 
       })
 
-    this.showDetail.$senddetails.subscribe((show) => {
+    this.showDetail.senddetails$.subscribe((show) => {
       this.recipe = show;
     });
   }

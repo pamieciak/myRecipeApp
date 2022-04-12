@@ -8,7 +8,7 @@ import { RecipeApiService } from './recipe-api.service';
 })
 export class ShowdetailService {
 
-public $senddetails = new Subject<Recipe>();
+public senddetails$ = new Subject<Recipe>();
 
   constructor() { }
 

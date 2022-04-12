@@ -1,1 +1,24 @@
-<p>add-recipe works!</p>
+<form [formGroup]="form" (ngSubmit)="addRecipe()">
+  <label>
+    Podaj nazwę przepisu
+    <br />
+    <input type=" text" formControlName="name" />
+  </label>
+  <br />
+  <ng-container formArrayName="description">
+    <label *ngFor="let decControl of descFormArray.controls; let index = index">
+      <input [formControlName]="index" />
+      <button (click)="addStep()" type="button">Dodaj kolejny krok</button>
+
+    </label>
+    <ol>
+      <li *ngFor="let show of showStep let i = index">{{ show[i] }}</li>
+    </ol>
+  </ng-container>
+  <label>
+    Dodaj ocenę
+    <input type="number" formControlName="rating">
+  </label>
+
+  <button>Dodaj przepis</button>
+</form>

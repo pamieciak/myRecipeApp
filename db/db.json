@@ -24,9 +24,8 @@
         }
       ],
       "rating": 4,
-      "imageURL":"https://cdn.galleries.smcloud.net/t/galleries/gf-ZYqb-VFkQ-Hj2u_kluski-z-serem-przepis-na-najlepsze-leniwe-z-twarogiem-664x442-nocrop.jpg"
+      "imageURL": "https://cdn.galleries.smcloud.net/t/galleries/gf-ZYqb-VFkQ-Hj2u_kluski-z-serem-przepis-na-najlepsze-leniwe-z-twarogiem-664x442-nocrop.jpg"
     },
-
     {
       "id": 2,
       "name": "jajecznica",
@@ -47,6 +46,78 @@
       ],
       "rating": 5,
       "imageURL": "https://www.mojegotowanie.pl/media/cache/default_view/uploads/media/recipe/0002/11/jajecznica-z-mlekiem_110355.webp"
+    },
+    {
+      "name": "",
+      "description": [
+        "sad",
+        "asd",
+        ""
+      ],
+      "rating": "",
+      "id": 3
+    },
+    {
+      "name": "asd",
+      "description": [
+        "dds",
+        "sdsa",
+        "dsd"
+      ],
+      "rating": 2,
+      "id": 4
+    },
+    {
+      "name": "",
+      "description": [
+        "asd",
+        "asdsa",
+        ""
+      ],
+      "rating": "",
+      "id": 5
+    },
+    {
+      "name": "",
+      "description": [
+        "sd",
+        "sd",
+        ""
+      ],
+      "rating": "",
+      "id": 6
+    },
+    {
+      "name": "",
+      "description": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "rating": "",
+      "id": 7
+    },
+    {
+      "name": "",
+      "description": [
+        "asdd",
+        "asd",
+        ""
+      ],
+      "rating": "",
+      "id": 8
+    },
+    {
+      "name": "",
+      "description": [
+        "qwewq",
+        "qweqwqweqwe",
+        ""
+      ],
+      "rating": "",
+      "id": 9
     }
   ],
   "users": []
